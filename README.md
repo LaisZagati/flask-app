@@ -25,7 +25,7 @@ Templates Folder: I made a templates/ folder and placed my HTML files inside (su
 Static Folder: I created a static/ folder for my Bootstrap (or custom) CSS files. I included the Bootstrap CDN in my HTML files for styling.
 
 Run the Application: I ran the Flask development server with:
-python app.py
+python run.py
 
 I could now access the app at http://127.0.0.1:5000.
 
@@ -33,7 +33,7 @@ Project Structure
 
 flask-app/
 │
-├── app.py                  # Main Flask application
+├── run.py                  # Main Flask application
 ├── templates/              # HTML files (index.html, about.html, etc.)
 └── static/                 # Static files (CSS, JS)
     └── css/
@@ -46,4 +46,4 @@ Bootstrap: The CSS framework I used to style the pages, integrated via a CDN in 
 
 Conclusion
 
-This project is a basic Flask web app styled with Bootstrap. It shows how to set up routes, templates, and static files, with responsive design provided by Bootstrap. I can easily extend this app by adding more features, pages, or customizing the CSS further.≥
+This project is a basic Flask web app styled with Bootstrap. It shows how to set up routes, templates, and static files, with responsive design provided by Bootstrap. I can easily extend this app by adding more features, pages, or customizing the CSS further.≥b
