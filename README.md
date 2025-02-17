@@ -1,4 +1,4 @@
-# flask-appFlask Web Application - Hello Flask Documentation
+# Flask Web Application - Hello Flask Documentation
 
 Overview
 
@@ -46,4 +46,4 @@ Bootstrap: The CSS framework I used to style the pages, integrated via a CDN in 
 
 Conclusion
 
-This project is a basic Flask web app styled with Bootstrap. It shows how to set up routes, templates, and static files, with responsive design provided by Bootstrap. I can easily extend this app by adding more features, pages, or customizing the CSS further.
+This project is a basic Flask web app styled with Bootstrap. It shows how to set up routes, templates, and static files, with responsive design provided by Bootstrap. I can easily extend this app by adding more features, pages, or customizing the CSS further.≥
