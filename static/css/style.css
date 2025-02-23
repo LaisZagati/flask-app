@@ -7,3 +7,7 @@
     line-height: 1.5; /* adds space between lines for better readability */
     margin: 10px 0; /* adds some space above and below the paragraph */
 }
+
+h2 {
+    text-align: center;
+}

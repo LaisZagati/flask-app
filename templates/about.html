@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>About</h2>
+
+    <h2>{{ page_title }}</h2>
     <p>
         The tech industry is largely male-dominated, with women in STEM facing sexism and feelings of inadequacy. This ongoing
         issue has deep historical roots.
@@ -9,34 +10,23 @@
         Whenever you feel pressured, these quotes can remind you that you're not alone and inspire you to keep going!
         </p>
 
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h3>Tracy Chou, CEO at Block Party</h3>
-                <p>
-                    “I have very personally felt the overwhelming loneliness, self-doubt, and frustration that often comes with the minority
-                    status of a woman in engineering. As much as I can help others get through or avoid those difficult stretches that I
-                    myself had to weather, I’d like to. As a bonus, the more women (and minorities) that enter and don’t leave the field,
-                    the better it all gets for everyone, including me!”
-                    Tracy Chou
-                </p>
-            </div>
-            <div class="col-md-5">
-                <img src="https://www.womentech.net/sites/default/files/inline-images/Tracy%20Chou%2C%20CEO%20at%20Block%20Party.jpg" alt="Tracy Chou">
-            </div>
-        </div>
+        {% for member in company %}
 
-        <div class="row featurette">
-            <div class="col-md-5">
-                <img src="https://www.womentech.net/sites/default/files/inline-images/Shaherose%20Charania%2C%20Co-Founder%20and%20CEO%20of%20Women%202.0.png" alt="Shaherose Charania">
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h3>{{member.name}}</h3>
+                    <p>
+                        {{member.description}}
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img src="{{member.image_source}}" alt="Tracy Chou" class="featurette-image image-responsive">
+                </div>
             </div>
-            <div class="col-md-7">
-                <h3>Shaherose Charania, Co-Founder and CEO of Women 2.0</h3>
-                <p>“Women no longer have an ‘if I can’ mindset. Now it’s more about ‘how I can’— be in tech, start something in tech, fund
-                something in tech. That shift is exciting! And it happened because we created a network where we show, daily, that women
-                are innovating.”
-            </p>
-            </div> 
-        </div>
+
+            <hr class="featurette-divider">
+
+        {% endfor %}
 
 {% endblock %}
 
