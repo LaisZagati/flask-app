@@ -1,0 +1,9 @@
+.col-md-5 img {
+    width: 50%
+}
+.col-md-7 p {
+    width: 90%;
+    text-align: justify; /* or 'left', 'center', 'right' based on your preference */
+    line-height: 1.5; /* adds space between lines for better readability */
+    margin: 10px 0; /* adds some space above and below the paragraph */
+}
