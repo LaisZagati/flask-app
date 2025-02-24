@@ -1,8 +1,15 @@
 import os
 import json
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash, redirect, url_for
+if os.path.exists("env.py"):
+    import env
 
 app = Flask(__name__)
+app.secret_key = os.environ.get("SECRET_KEY")
+
+# Debug print statement
+print("Secret Key:", app.secret_key)  # Add this line to check if it's set
+
 
 @app.route("/")
 def index():
@@ -27,11 +34,15 @@ def about_member(member_name):
         
     
 
-@app.route("/contact" , methods=["GET","POST"])
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
-        print(request.form.get ("name"))
+        flash("Thanks {}, we have received your message!".format(request.form.get("name")), "success")
+        return redirect(url_for("contact"))  # Redirect to prevent form resubmission
+
     return render_template("contact.html", page_title="Contact")
+
+
  
 @app.route("/careers")
 def careers():
